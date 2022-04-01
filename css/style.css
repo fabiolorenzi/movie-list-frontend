@@ -188,8 +188,19 @@ main {
     transition-duration: 0.3s;
 }
 
+.reviewsButton {
+    background-color: #006430;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    padding: 5px 20px;
+    transition-duration: 0.3s;
+}
+
 .updateButton:hover,
-.removeButton:hover {
+.removeButton:hover,
+.reviewsButton:hover {
     background-color: #e6ff0a;
     color: #000000;
     transition-duration: 0.3s;
