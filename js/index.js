@@ -32,8 +32,8 @@ function renderBody(loading) {
                             <p>${movie.descr}</p>
                         </div>
                         <div class="movie_buttons">
-                            <button onclick="updateMovie(${movie.id})">Update</button>
-                            <button onclick="removeMovie(${movie.id})">Remove</button>
+                            <button class="updateButton" onclick="updateMovie(${movie.id})">Update</button>
+                            <button class="removeButton" onclick="removeMovie(${movie.id})">Remove</button>
                         </div>
                     </div>
                 </li>`

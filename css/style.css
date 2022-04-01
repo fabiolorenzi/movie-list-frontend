@@ -161,6 +161,40 @@ main {
     font-weight: 500;
 }
 
+.movie_buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.updateButton {
+    background-color: #0008ff;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    padding: 5px 20px;
+    transition-duration: 0.3s;
+}
+
+.removeButton {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #000000;
+    padding: 5px 20px;
+    transition-duration: 0.3s;
+}
+
+.updateButton:hover,
+.removeButton:hover {
+    background-color: #e6ff0a;
+    color: #000000;
+    transition-duration: 0.3s;
+}
+
 footer { 
     display: block;
     width: 100%;
