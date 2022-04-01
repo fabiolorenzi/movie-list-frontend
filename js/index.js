@@ -31,6 +31,10 @@ function renderBody(loading) {
                         <div class="movie_desc">
                             <p>${movie.descr}</p>
                         </div>
+                        <div class="movie_buttons">
+                            <button onclick="updateMovie(${movie.id})">Update</button>
+                            <button onclick="removeMovie(${movie.id})">Remove</button>
+                        </div>
                     </div>
                 </li>`
             ;
@@ -51,3 +55,23 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(() => renderBody(false))
     .catch(err => console.log(err));
 });
+
+function updateMovie(id) {
+    location.href = "update-movie.html/?id=" + id;
+};
+
+function removeMovie(id) {
+    fetch("https://movie-list-backend22.herokuapp.com/api/movies/delete.php", {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "id": id
+        })
+    })
+    .then(resp => resp.json())
+    .then(() => alert("Movie removed successfully"))
+    .then(() => location.reload())
+    .catch(err => console.log(err));
+};
