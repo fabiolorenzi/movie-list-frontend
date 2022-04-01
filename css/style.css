@@ -78,7 +78,7 @@ main {
 #main_container_home {
     display: block;
     width: 98%;
-    margin: 180px auto 220px;
+    margin: 100px auto 220px;
 }
 
 #spinner img {
@@ -94,8 +94,79 @@ main {
     }
 }
 
+#nomovies {
+    display: block;
+    width: 100%;
+    margin: 200px auto 180px;
+}
 
+#nomovies h1 {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center;
+}
 
+#movies_list {
+    display: block;
+    width: 100%;
+    list-style: none;
+}
+
+.movie {
+    display: flex;
+    width: 800px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto 50px;
+    background-color: #212121;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.movie_img {
+    display: block;
+    width: 250px;
+}
+
+.movie_img img {
+    display: block;
+    width: 95%;
+    margin: 0 auto 15px;
+}
+
+.movie_body {
+    display: flex;
+    width: 550px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.movie_data {
+    display: block;
+    width: 190px;
+    margin: auto;
+}
+
+.movie_data h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.movie_desc {
+    display: block;
+    width: 340px;
+    margin: auto;
+}
+
+.movie_desc p {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+}
 
 
 
@@ -113,4 +184,5 @@ footer p {
     font-weight: 300;
     text-align: left;
     padding: 50px 0 50px 20px;
+    margin: 0;
 }
