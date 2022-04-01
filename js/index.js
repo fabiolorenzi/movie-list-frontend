@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function updateMovie(id) {
-    location.href = "update-movie.html/?id=" + id;
+    location.href = "update-movie.html?id=" + id;
 };
 
 function removeMovie(id) {
