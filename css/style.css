@@ -50,7 +50,7 @@ header div a:hover {
 .title {
     display: block;
     width: 100%;
-    margin-top: 120px;
+    margin-top: 150px;
 }
 
 .title h1 {
@@ -69,7 +69,7 @@ main {
 #main_container_home {
     display: block;
     width: 98%;
-    margin: 180px auto;
+    margin: 180px auto 220px;
 }
 
 #main_container_home img {
@@ -83,4 +83,18 @@ main {
     to {
         transform: rotate(360deg);
     }
+}
+
+footer { 
+    display: block;
+    width: 100%;
+    background-color: #000000;
+}
+
+footer p {
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 300;
+    text-align: left;
+    padding: 50px 0 50px 20px;
 }
