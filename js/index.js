@@ -15,32 +15,30 @@ function renderBody(loading) {
                 <h1>No movies found</h1>
             </div>`;
     } else {
-        target_id.innerHTML = 
-            `<div id="movies_section">
-                {movies.map(movie => {
-                    return(
-                        <div class="movie" key={movie.id + "M"}>
-                            <div class="movie_img">
-                                <img src={movie.img} alt="movie_poster" />
-                            </div>
-                            <div class="movie_body">
-                                <div class="movie_data">
-                                    <h2>Title: {movie.title}</h2>
-                                    <h2>Genre: {movie.genre}</h2>
-                                    <h2>Year: {movie.rel}</h2>
-                                </div>
-                                <div class="movie_desc">
-                                    <p>{movie.descr}</p>
-                                </div>
-                            </div>
+        target_id.innerHTML = `<ul id="movies_list"></ul>`;
+        movies.forEach(movie => {
+            document.getElementById("movies_list").innerHTML +=
+                `<li class="movie" key=${movie.id + "M"}>
+                    <div class="movie_img">
+                        <img src=${movie.img} alt="movie_poster" />
+                    </div>
+                    <div class="movie_body">
+                        <div class="movie_data">
+                            <h2>Title: ${movie.title}</h2>
+                            <h2>Genre: ${movie.genre}</h2>
+                            <h2>Year: ${movie.rel}</h2>
                         </div>
-                    )
-                })}
-            </div>`;
+                        <div class="movie_desc">
+                            <p>${movie.descr}</p>
+                        </div>
+                    </div>
+                </li>`
+            ;
+        });
     };
 };
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", () => {
     renderBody(true);
     fetch("https://movie-list-backend22.herokuapp.com/api/movies/read.php", {
         method: "GET",
