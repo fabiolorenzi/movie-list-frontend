@@ -62,10 +62,6 @@ header div a:hover {
     text-transform: uppercase;
 }
 
-
-
-
-
 main {
     display: block;
     width: 100%;
@@ -107,6 +103,7 @@ main {
     display: block;
     width: 100%;
     list-style: none;
+    padding-left: 0;
 }
 
 .movie {
@@ -164,10 +161,6 @@ main {
     font-weight: 500;
 }
 
-
-
-
-
 footer { 
     display: block;
     width: 100%;
@@ -181,4 +174,47 @@ footer p {
     text-align: left;
     padding: 50px 0 50px 20px;
     margin: 0;
+}
+
+@media only screen and (max-width: 850px) {
+    .movie {
+        width: 85%;
+    }
+
+    .movie_img {
+        width: 40%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .movie {
+        width: 90%;
+    }
+
+    .movie_img {
+        width: 60%;
+    }
+    
+    .movie_data {
+        width: 90%;
+    }
+
+    .movie_data h2 {
+        font-size: 19px;
+    }
+
+    .movie_desc {
+        width: 90%;
+    }
+
+    .movie_desc p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .movie_img {
+        width: 90%;
+    }
 }
