@@ -19,28 +19,29 @@ function renderBody(loading) {
     } else {
         target_id.innerHTML = `<ul id="movies_list"></ul>`;
         movies.forEach(movie => {
-            document.getElementById("movies_list").innerHTML +=
-                `<li class="movie" key=${movie.id + "M"}>
-                    <div class="movie_img">
-                        <img src=${movie.img} alt="movie_poster" />
-                    </div>
-                    <div class="movie_body">
-                        <div class="movie_data">
-                            <h2>Title: ${movie.title}</h2>
-                            <h2>Genre: ${movie.genre}</h2>
-                            <h2>Year: ${movie.rel}</h2>
+            if (movie.img.length > 0) {
+                document.getElementById("movies_list").innerHTML +=
+                    `<li class="movie" key=${movie.id + "M"}>
+                        <div class="movie_img">
+                            <img src=${movie.img} alt="movie_poster" />
                         </div>
-                        <div class="movie_desc">
-                            <p>${movie.descr}</p>
+                        <div class="movie_body">
+                            <div class="movie_data">
+                                <h2>Title: ${movie.title}</h2>
+                                <h2>Genre: ${movie.genre}</h2>
+                                <h2>Year: ${movie.rel}</h2>
+                            </div>
+                            <div class="movie_desc">
+                                <p>${movie.descr}</p>
+                            </div>
+                            <div class="movie_buttons">
+                                <button class="updateButton" onclick="updateMovie(${movie.id})">Update</button>
+                                <button class="removeButton" onclick="removeMovie(${movie.id})">Remove</button>
+                            </div>
                         </div>
-                        <div class="movie_buttons">
-                            <button class="updateButton" onclick="updateMovie(${movie.id})">Update</button>
-                            <button class="removeButton" onclick="removeMovie(${movie.id})">Remove</button>
-                            <button class="reviewsButton" onclick="showReviews(${movie.id})">Reviews</button>
-                        </div>
-                    </div>
-                </li>`
-            ;
+                    </li>`
+                ;
+            }
         });
     };
 };
@@ -92,10 +93,6 @@ function getReviews() {
     .catch(err => console.log(err));
 };
 
-function showReviews(id) {
-    location.href = "reviews.html?id=" + id;
-};
-
 function addReview(id) {
     let val = document.getElementById(id + "IR").value;
     let titleMovie = "";
@@ -121,9 +118,3 @@ function addReview(id) {
         .catch(err => console.log(err));
     };
 };
-
-/*
-<div class="addReview_section">
-                            <input type="text" name=${movie.title} value="" placeholder="Text" id=${movie.id + "IR"} />
-                            <button class="reviewsButtonAdd" onclick="addReview(${movie.id})">Add</button>
-                        </div>*/
