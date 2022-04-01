@@ -10,6 +10,11 @@ body {
     background-color: #383838;
 }
 
+
+
+
+
+
 header {
     display: block;
     width: 100%;
@@ -61,6 +66,10 @@ header div a:hover {
     text-transform: uppercase;
 }
 
+
+
+
+
 main {
     display: block;
     width: 100%;
@@ -84,6 +93,13 @@ main {
         transform: rotate(360deg);
     }
 }
+
+
+
+
+
+
+
 
 footer { 
     display: block;
