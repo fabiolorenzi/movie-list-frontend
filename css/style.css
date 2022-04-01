@@ -206,6 +206,21 @@ main {
     transition-duration: 0.3s;
 }
 
+.addmovie {
+    display: block;
+    width: 300px;
+    margin: 100px auto 150px;
+    background-color: #212121;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+.addmovie input {
+    width: 95%;
+    margin-bottom: 10px;
+}
+
 footer { 
     display: block;
     width: 100%;
