@@ -7,25 +7,27 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="shortcut icon" href="media/icon.png" />
-    <title>Movie List | Home</title>
+    <title>Movie List | Update Movie</title>
 </head>
 <body>
     <header>
         <div>
-            <a id="header_active" href="index.html">HOME</a>
+            <a href="index.html">HOME</a>
             <a href="add-movie.html">ADD MOVIE</a>
-            <a href="reviews.html">REVIEWS</a>
+            <a id="header_active" href="reviews.html">REVIEWS</a>
         </div>
     </header>
     <div class="title">
-        <h1>Movie List</h1>
+        <h1>Reviews</h1>
     </div>
-    <main>
-        <div id="main_container_home"></div>
+    <main class="addmovie">
+        <input type="text" id="titleR" value="" placeholder="Title" />
+        <input type="text" id="textR" value="" placeholder="Text" />
+        <button class="reviewsButton" onclick="addReview()">Add</button>
     </main>
     <footer>
         <p>Developed by F.Lorenzi</p>
     </footer>
-    <script src="js/index.js"></script>
+    <script src="js/reviews.js"></script>
 </body>
 </html>

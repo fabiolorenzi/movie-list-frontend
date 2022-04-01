@@ -22,7 +22,7 @@ header {
 
 header div {
     display: flex;
-    width: 220px;
+    width: 320px;
     margin: auto;
     flex-wrap: nowrap;
     justify-content: space-between;

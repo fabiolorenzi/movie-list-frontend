@@ -1,7 +1,6 @@
 const target_id = document.getElementById("main_container_home");
 
 var movies = Array();
-var reviews = Array();
 
 function renderBody(loading) {
     if (loading) {
@@ -57,7 +56,6 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(resp => resp.json())
     .then(data => movies = data)
     .then(() => renderBody(false))
-    .then(() => getReviews())
     .catch(err => console.log(err));
 });
 
@@ -79,42 +77,4 @@ function removeMovie(id) {
     .then(() => alert("Movie removed successfully"))
     .then(() => location.reload())
     .catch(err => console.log(err));
-};
-
-function getReviews() {
-    fetch("https://movie-list-backend22.herokuapp.com/api/reviews/read.php", {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(resp => resp.json())
-    .then(data => reviews = data)
-    .catch(err => console.log(err));
-};
-
-function addReview(id) {
-    let val = document.getElementById(id + "IR").value;
-    let titleMovie = "";
-    for (let i = 0; i < movies.length; i++) {
-        if (movies[i].id === id) {
-            titleMovie = movies[i].title;
-        };
-    };
-    if (titleMovie.length > 0 && val.length > 0) {
-        fetch("https://movie-list-backend22.herokuapp.com/api/reviews/create.php", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                "title": titleMovie,
-                "text": val
-            })
-        })
-        .then(resp => resp.json())
-        .then(() => alert("Review inserted successfully"))
-        .then(() => location.reload())
-        .catch(err => console.log(err));
-    };
 };
