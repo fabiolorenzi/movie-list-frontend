@@ -4,7 +4,7 @@ function addmovie() {
     let rel = document.getElementById("yearI").value;
     let descr = document.getElementById("descI").value;
     let img = document.getElementById("imgI").value;
-    fetch("https://movie-list-backend22.herokuapp.com/api/movies/create.php", {
+    fetch("https://movielistbackend.hopto.org/api/movies/create.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"

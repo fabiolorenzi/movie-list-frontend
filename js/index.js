@@ -47,7 +47,7 @@ function renderBody(loading) {
 
 document.addEventListener("DOMContentLoaded", () => {
     renderBody(true);
-    fetch("https://movie-list-backend22.herokuapp.com/api/movies/read.php", {
+    fetch("https://movielistbackend.hopto.org/api/movies/read.php", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -64,7 +64,7 @@ function updateMovie(id) {
 };
 
 function removeMovie(id) {
-    fetch("https://movie-list-backend22.herokuapp.com/api/movies/delete.php", {
+    fetch("https://movielistbackend.hopto.org/api/movies/delete.php", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"

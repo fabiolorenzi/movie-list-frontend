@@ -6,7 +6,7 @@ function updatemovie() {
     let rel = document.getElementById("yearI").value;
     let descr = document.getElementById("descI").value;
     let img = document.getElementById("imgI").value;
-    fetch("https://movie-list-backend22.herokuapp.com/api/movies/update.php", {
+    fetch("https://movielistbackend.hopto.org/api/movies/update.php", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json"

@@ -1,7 +1,7 @@
 function addReview() {
     let title = document.getElementById("titleR").value;
     let text = document.getElementById("textR").value;
-    fetch("https://movie-list-backend22.herokuapp.com/api/reviews/create.php", {
+    fetch("https://movielistbackend.hopto.org/api/reviews/create.php", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -18,7 +18,7 @@ function addReview() {
 };
 
 function removeReview(id) {
-    fetch("https://movie-list-backend22.herokuapp.com/api/reviews/delete.php", {
+    fetch("https://movielistbackend.hopto.org/api/reviews/delete.php", {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -35,7 +35,7 @@ function removeReview(id) {
 
 document.addEventListener("DOMContentLoaded", () => {
     renderBody(true);
-    fetch("https://movie-list-backend22.herokuapp.com/api/reviews/read.php", {
+    fetch("https://movielistbackend.hopto.org/api/reviews/read.php", {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
